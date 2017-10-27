@@ -29,6 +29,7 @@ RUN echo "index.query.bool.max_clause_count: 16384" >> $ES_HOME/config/elasticse
 RUN echo "index.max_result_window: 2147483647" >> $ES_HOME/config/elasticsearch.yml
 
 EXPOSE 9200 9300
- 
+
+USER elsearch 
 
 ENTRYPOINT ["/usr/share/elasticsearch/bin/elasticsearch" ] 
